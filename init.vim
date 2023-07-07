@@ -2,43 +2,40 @@
 " --- Installation du plugin manager
 " --------------
 
-set nocompatible
-filetype off
-
 call plug#begin('~/.config/nvim/plugged')
     Plug 'itchyny/lightline.vim'
     Plug 'tpope/vim-fugitive'
 call plug#end()
 
-filetype plugin indent on
+filetype plugin indent on			" Permet d'utiliser la detection de filetype
 
 " --------------
 " --- Configuration de la status line
 " --------------
 
-set cmdheight=1
-set laststatus=2
+set cmdheight=1						" Nombre de lignes de la lignbe de commande
+set laststatus=2					" Status Line
 
 " --------------
 " --- Gestion des buffers 
 " --------------
 
-set hidden			" Permet de ne pas sauver pour changer de buffer
+set hidden							" Permet de ne pas sauver pour changer de buffer
 
 " --------------
 " --- Colors 
 " --------------
 
-set t_Co=256                        " Passage en mode temrinal 256 couleurs
+set t_Co=256                        " Passage en mode terminal 256 couleurs
 set background=dark			        " Choix d'un fond sombre
-colorscheme blueice                 " Thème couleur
+colorscheme rancune                 " Thème couleur
 syntax enable				        " active la coloration syntaxique
 
 " --------------
 " --- Cursorline 
 " --------------
 
-set cursorline
+set cursorline								" Active la cursorline lorsque l'on n'est pas en mode insert
 autocmd InsertEnter * set nocursorline
 autocmd InsertLeave * set cursorline
 
@@ -47,16 +44,22 @@ autocmd InsertLeave * set cursorline
 " --------------
 
 set showcmd 				        " Affiche les commandes en cours de frappe
-set backspace=indent,eol,start		" Permet d'effacer l'indentation automatique, les retours chariots et d'aller au dela de l'endroit d'activation du mode insert
+set backspace=indent,eol,start		" Permet d'effacer l'indentation automatique, 
+									" les retours chariots et d'aller au dela de l'endroit d'activation du mode insert
+
 set history=1000			        " Historique plus long
 set wildmenu				        " Active le menu de complétion des commandes sur la touche tab
 set wildmode=longest:full,full
+
 set mouse=a				            " Support souris (scroll,selection, etc.)
+
 set scrolloff=3				        " Affiche toujours 3 lignes pre/post curseur
 set sidescrolloff=5			        " Affiche toujours 5 colonnes pre/post curseur
-set autoread				        " Relit un fichier si modifié en dehors de vim
-set number				            " Affiche les numéros de ligne
 
+set autoread				        " Relit un fichier si modifié en dehors de nvim
+
+set number				            " Affiche les numéros de ligne
+set relativenumber					" Numerotation relative
 
 " --------------
 " --- Reglages activés par défaut 
@@ -91,7 +94,10 @@ set nowrap				        " Les lignes longues ne sont pas affichées tronquées
 set linebreak				    " Ne permet la troncature de ligne que sur les caractères de 'breakat' (inutile avec nowrap)
 
 " --------------
-" --- Tricks
+" --- Shortcuts
 " --------------
+
+" F1 active ou desactive les numeros de ligne relatifs
+nnoremap <F1> :set relativenumber!<CR>
 
 runtime lightline.vim
