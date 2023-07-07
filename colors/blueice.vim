@@ -23,6 +23,15 @@ hi PreProc	    cterm=NONE ctermfg=3 ctermbg=NONE
 hi Statement	cterm=NONE ctermfg=NONE ctermbg=NONE
 hi Type		    cterm=NONE ctermfg=2 ctermbg=NONE
 
+hi Function     cterm=bold ctermfg=White ctermbg=NONE
+hi Conditional  cterm=bold ctermfg=White ctermbg=NONE
+hi Repeat       cterm=bold ctermfg=White ctermbg=NONE
+hi Label        cterm=bold ctermfg=White ctermbg=NONE
+hi Operator     cterm=bold ctermfg=White ctermbg=NONE
+hi Keyword      cterm=bold ctermfg=White ctermbg=NONE
+hi Exception    cterm=bold ctermfg=White ctermbg=NONE
+
+
 hi Todo         cterm=bold,underline ctermfg=13 ctermbg=NONE
 hi Visual	    cterm=bold ctermfg=0 ctermbg=8
 hi Search	    cterm=bold,underline ctermfg=11 ctermbg=NONE
@@ -65,12 +74,13 @@ hi CursorLineNR  cterm=bold ctermfg=11 ctermbg=0
 
 " ------------------------------------------------------------------------------
 
-hi cLibFunction cterm=bold ctermfg=NONE ctermbg=NONE
-hi cLibType     cterm=bold ctermfg=2 ctermbg=NONE
-hi cLibMacro    cterm=bold ctermfg=3 ctermbg=NONE
-hi cLibStruct   cterm=bold ctermfg=2 ctermbg=NONE
-hi cLibEnum     cterm=bold ctermfg=2 ctermbg=NONE
-" hi cLibMember   cterm=bold ctermfg=1 ctermbg=NONE
-" hi cLibVariable cterm=bold ctermfg=1 ctermbg=NONE
+hi cLibFunction ctermfg=White ctermbg=NONE
+hi cLibType     ctermfg=White ctermbg=NONE
+hi cLibMacro    ctermfg=White ctermbg=NONE
+hi cLibStruct   ctermfg=White ctermbg=NONE
+hi cLibEnum     ctermfg=White ctermbg=NONE
+"hi cLibMember   ctermfg=White ctermbg=NONE
+"hi cLibVariable ctermfg=White ctermbg=NONE
+
 
 "vim: sw=4
