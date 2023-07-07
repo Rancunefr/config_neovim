@@ -7,6 +7,7 @@ filetype off
 
 call plug#begin('~/.config/nvim/plugged')
     Plug 'itchyny/lightline.vim'
+    Plug 'tpope/vim-fugitive'
 call plug#end()
 
 filetype plugin indent on
