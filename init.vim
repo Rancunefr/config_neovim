@@ -5,6 +5,7 @@
 call plug#begin('~/.config/nvim/plugged')
     Plug 'itchyny/lightline.vim'
     Plug 'tpope/vim-fugitive'
+	Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
 
 filetype plugin indent on			" Permet d'utiliser la detection de filetype
@@ -101,3 +102,4 @@ set linebreak				    " Ne permet la troncature de ligne que sur les caractères 
 nnoremap <F1> :set relativenumber!<CR>
 
 runtime lightline.vim
+runtime coc.vim 
