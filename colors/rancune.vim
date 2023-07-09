@@ -82,5 +82,13 @@ hi cLibEnum     ctermfg=White ctermbg=NONE
 "hi cLibMember   ctermfg=White ctermbg=NONE
 "hi cLibVariable ctermfg=White ctermbg=NONE
 
+" ------------------------------------------------------------------------------
+
+hi CocFloating ctermfg=Blue ctermbg=Black
+hi CocFloatActive ctermfg=Red ctermbg=Black
+
+
+
+
 
 "vim: sw=4
