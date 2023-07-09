@@ -74,5 +74,4 @@ vim.keymap.set('n', '<F1>', ':set relativenumber!<CR>')
 -- Fichiers de config à inclure
 
 require( 'cfg_lualine' )
-
-require("bufferline").setup{}
+require( 'cfg_barline' )
